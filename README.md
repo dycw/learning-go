@@ -1,3 +1,3 @@
 # learning-go
 
-Learning the `go` programming language
+Learning the [`go`](https://go.dev/) programming language.
