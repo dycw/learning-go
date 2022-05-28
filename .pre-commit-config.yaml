@@ -1,5 +1,5 @@
 repos:
-  - repo: https://github.com/Bahjat/pre-commit-golang
+  - repo: https://github.com/bahjat/pre-commit-golang
     rev: v1.0.0
     hooks:
       - id: go-fmt-import
@@ -7,6 +7,6 @@ repos:
       # - id: go-lint
       # - id: go-unit-tests
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v2.6.2"
+    rev: ""
     hooks:
       - id: prettier
