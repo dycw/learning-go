@@ -3,6 +3,6 @@ repos:
     rev: v1.0.0
     hooks:
       - id: go-fmt-import
-      - id: go-vet
-      - id: go-lint
-      - id: go-unit-tests
+      # - id: go-vet
+      # - id: go-lint
+      # - id: go-unit-tests
