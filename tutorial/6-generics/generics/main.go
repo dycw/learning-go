@@ -35,7 +35,7 @@ func main() {
 
 	fmt.Printf("Generic Sums with Constraint: %v and %v\n",
 		SumNumbers(ints),
-		SumNumbers(floats),
+		SumNumbers(floas),
 	)
 }
 
