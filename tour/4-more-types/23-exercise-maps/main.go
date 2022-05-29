@@ -6,7 +6,12 @@ import (
 )
 
 func WordCount(s string) map[string]int {
-	return map[string]int{"x": 1}
+	result := make(map[string]int)
+	flds := strings.Fields(s)
+	for _, v := range flds {
+		result[v] += 1
+	}
+	return result
 }
 
 func main() {
