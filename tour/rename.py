@@ -1,10 +1,26 @@
 from pathlib import Path
+from argparse import ArgumentParser
 
 
-PATHS = sorted(Path('tour').iterdir())
-PATHS = (path for path in PATHS if path.suffix == ".go")
-for i, path in enumerate(PATHS, start=1):
-    cnt, name = path.name.split("_", 1)
-    new_path = path.parent.joinpath('2-basics', f"{i:02}_{name}")
-    print(f"Renaming\n  {path}\n> {new_path}")
-    # path.rename(new_path)
+def main() -> None:
+    # parse args
+    parser = ArgumentParser()
+    parser.add_argument("--do", action="store_true")
+    args = parser.parse_args()
+    do: bool = args.do
+
+    # main
+    paths = sorted(Path.cwd().glob("**/*.go"))
+    for _, path in enumerate(paths, start=1):
+        new_path = func(path)
+        print(f"Renaming\n  {path}\n> {new_path}")
+        if do:
+            path.rename(new_path)
+
+
+def func(path: Path) -> Path:
+    return path.with_name(path.name.replace("_", "-"))
+
+
+if __name__ == "__main__":
+    main()
