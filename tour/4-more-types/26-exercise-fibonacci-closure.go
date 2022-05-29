@@ -10,7 +10,6 @@ func fibonacci() func() int {
 		sum := i + j
 		i, j = j, sum
 		return sum
-
 	}
 }
 
