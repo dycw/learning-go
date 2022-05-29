@@ -32,7 +32,6 @@ def func(path: Path, *, do: bool) -> None:
     print(f"Propose\n    {path}\n--> {new_path}")
 
     if do:
-        new_path.parent.mkdir()
         path.rename(new_path)
         print("...done")
 
